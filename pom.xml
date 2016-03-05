@@ -16,6 +16,7 @@
 		<spring.version>4.1.7.RELEASE</spring.version>
 		<jackson.version>2.6.3</jackson.version>
 		<shiro.version>1.2.3</shiro.version>
+		<quartz.version>2.2.2</quartz.version>
 	</properties>
 
 	<build>
@@ -135,5 +136,29 @@
 			<version>2.6.3</version>
 		</dependency>
 		<!-- web dependency end -->
+		
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<version>${quartz.version}</version>
+		</dependency>
+		
+		<dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-jaxws</artifactId>
+            <version>3.1.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http</artifactId>
+            <version>3.1.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http-jetty</artifactId>
+            <version>3.1.5</version>
+        </dependency>
+        
+		
 	</dependencies>
 </project>

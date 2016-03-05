@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--IRealHourAQIDao映射文件 -->
+<mapper namespace="com.gl.webforair.core.dao.IRealHourAQIDao">
+	<resultMap id="RealHourAQIMap" type="RealHourAQI">
+		<result property="id" column="id" />
+		<result property="portname" column="portname" />
+		<result property="dateTime" column="dateTime" />
+		<result property="sO2" column="SO2" />
+		<result property="sO2_IAQI" column="SO2_IAQI" />
+		<result property="nO2" column="NO2" />
+		<result property="nO2_IAQI" column="NO2_IAQI" />
+		<result property="pM10" column="PM10" />
+		<result property="pM10_IAQI" column="PM10_IAQI" />
+		<result property="cO" column="CO" />
+		<result property="cO_IAQI" column="CO_IAQI" />
+		<result property="o3" column="O3" />
+		<result property="o3_IAQI" column="O3_IAQI" />
+		<result property="recent8HoursO3" column="Recent8HoursO3" />
+		<result property="recent8HoursO3_IAQI" column="Recent8HoursO3_IAQI" />
+		<result property="pM25" column="PM25" />
+		<result property="pM25_IAQI" column="PM25_IAQI" />
+		<result property="aQIValue" column="AQIValue" />
+		<result property="primaryPollutant" column="PrimaryPollutant" />
+		<result property="dClass" column="Class" />
+		<result property="grade" column="Grade" />
+		<result property="healthEffect" column="HealthEffect" />
+		<result property="takeStep" column="TakeStep" />
+	</resultMap>
+
+	<insert id="insert" parameterType="RealHourAQI" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO tb_RealHourAQI
+		(
+			portname, dateTime, SO2, SO2_IAQI, NO2, NO2_IAQI, PM10, PM10_IAQI, CO, CO_IAQI, O3, O3_IAQI, Recent8HoursO3, Recent8HoursO3_IAQI, PM25, PM25_IAQI, AQIValue, PrimaryPollutant, Class, Grade, HealthEffect, TakeStep
+		)
+		VALUES
+		(
+			#{portname}, #{dateTime}, #{sO2}, #{sO2_IAQI}, #{nO2}, #{nO2_IAQI}, #{pM10}, #{pM10_IAQI}, #{cO}, #{cO_IAQI}, #{o3}, #{o3_IAQI}, #{recent8HoursO3}, #{recent8HoursO3_IAQI}, #{pM25}, #{pM25_IAQI}, #{aQIValue}, #{primaryPollutant}, #{dClass}, #{grade}, #{healthEffect}, #{takeStep}
+		)
+	</insert>
+
+	<delete id="deleteAll">
+		DELETE FROM tb_RealHourAQI
+	</delete>
+
+	<select id="selectByParams" parameterType="java.util.HashMap"
+		resultMap="RealHourAQIMap">
+		SELECT * FROM tb_RealHourAQI
+		ORDER BY dateTime desc
+	</select>
+</mapper>

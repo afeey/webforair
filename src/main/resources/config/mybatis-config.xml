@@ -7,8 +7,6 @@
 		<setting name="aggressiveLazyLoading" value="false"/>
 	</settings>
 	<typeHandlers>
-		<typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.gl.webforair.core.enums.ResourceTypeEnum"/>
-    	<typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.gl.webforair.core.enums.UseStatusEnum"/>
-    	<typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.gl.webforair.core.enums.YesNoEnum"/>
+		
     </typeHandlers>
 </configuration>
