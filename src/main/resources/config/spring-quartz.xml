@@ -16,7 +16,7 @@
 	<!-- 调度触发器 -->
 	<bean id="cronTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 		<property name="jobDetail" ref="syncJobDetail" />
-		<property name="cronExpression" value="0/20 * * * * ?" /><!-- 0/20 * * * * ? -->
+		<property name="cronExpression" value="0 5/1 * * * ?" /><!-- 0/20 * * * * ? -->
 	</bean>
 
 	<bean id="syncJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
@@ -26,6 +26,6 @@
 	</bean>
 	
 	<!-- 任务Bean  -->
-	<bean id="syncJob" class="com.gl.webforair.core.service.imp.SyncJob" />
+	<bean id="syncJob" class="com.gl.webforair.core.service.imp.SyncJobImpl" />
 	
 </beans>

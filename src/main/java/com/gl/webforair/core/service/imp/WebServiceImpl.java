@@ -29,6 +29,10 @@ public class WebServiceImpl implements IWebService {
 	
 	@Value("${ws.url}")
 	private String serviceUrl; // webservice url
+	
+	private GregorianCalendar gc = new GregorianCalendar();
+	private JaxWsProxyFactoryBean factory = null;
+	private WebServiceForAirSoap client = null;
 
 	@Override
 	public String getHourAQI(Integer portId, Date start, Date end) {
@@ -37,18 +41,20 @@ public class WebServiceImpl implements IWebService {
 		String data = "";
 
 		try {
-			GregorianCalendar gc = new GregorianCalendar();
 			gc.setTime(start);
 			XMLGregorianCalendar xgcStart;
 			xgcStart = DatatypeFactory.newInstance().newXMLGregorianCalendar(gc);
 			gc.setTime(end);
 			XMLGregorianCalendar xgcEnd = DatatypeFactory.newInstance().newXMLGregorianCalendar(gc); 
 			
-			JaxWsProxyFactoryBean factory = new JaxWsProxyFactoryBean();
-			factory.setServiceClass(WebServiceForAirSoap.class);
-			factory.setAddress(serviceUrl);
-
-			WebServiceForAirSoap client = (WebServiceForAirSoap) factory.create();
+			//创建client
+			if(client == null){
+				factory = new JaxWsProxyFactoryBean();
+				factory.setServiceClass(WebServiceForAirSoap.class);
+				factory.setAddress(serviceUrl);
+				client = (WebServiceForAirSoap) factory.create();
+			}
+			
 			data = client.getHourAQI(portId, xgcStart, xgcEnd);
 			
 		} catch (DatatypeConfigurationException e) {

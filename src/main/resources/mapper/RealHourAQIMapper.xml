@@ -5,9 +5,9 @@
 <!--IRealHourAQIDao映射文件 -->
 <mapper namespace="com.gl.webforair.core.dao.IRealHourAQIDao">
 	<resultMap id="RealHourAQIMap" type="RealHourAQI">
-		<result property="id" column="id" />
-		<result property="portname" column="portname" />
-		<result property="dateTime" column="dateTime" />
+		<result property="id" column="Id" />
+		<result property="portname" column="Portname" />
+		<result property="dateTime" column="DateTime" />
 		<result property="sO2" column="SO2" />
 		<result property="sO2_IAQI" column="SO2_IAQI" />
 		<result property="nO2" column="NO2" />
@@ -45,7 +45,7 @@
 		DELETE FROM tb_RealHourAQI
 	</delete>
 
-	<select id="selectByParams" parameterType="java.util.HashMap"
+	<select id="selectAll" parameterType="java.util.HashMap"
 		resultMap="RealHourAQIMap">
 		SELECT * FROM tb_RealHourAQI
 		ORDER BY dateTime desc

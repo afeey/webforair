@@ -2,21 +2,21 @@ package com.gl.webforair.core.service;
 
 import java.util.List;
 
-import com.gl.webforair.core.po.RealHourAQI;
+import com.gl.webforair.core.po.HourAQI;
 
 /**
- * RealHourAQI数据服务层接口
+ * HourAQI数据服务层接口
  * 
  * @author afeey
  *
  */
-public interface IRealHourAQIService {
+public interface IHourAQIService {
 	
 	/**
 	 * 添加数据
 	 * @param datalist
 	 */
-	void add(List<RealHourAQI> datalist);
+	void add(List<HourAQI> datalist);
 	
 	/**
 	 * 删除所有记录
@@ -27,11 +27,11 @@ public interface IRealHourAQIService {
 	 * 查询所有数据
 	 * @return 数据集合
 	 */
-	List<RealHourAQI> listAll();
+	List<HourAQI> listAll();
 	
 	/**
 	 * 同步数据
 	 * @param datalist 数据列表
 	 */
-	void syncData(List<RealHourAQI> datalist);
+	void syncData(List<HourAQI> datalist);
 }

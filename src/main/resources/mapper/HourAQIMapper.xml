@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--IHourAQIDao映射文件 -->
+<mapper namespace="com.gl.webforair.core.dao.IHourAQIDao">
+	<resultMap id="HourAQIMap" type="HourAQI">
+		<result property="m_Id" column="Id" />
+		<result property="m_Portname" column="Portname" />
+		<result property="m_DateTime" column="DateTime" />
+		<result property="m_SO2" column="SO2" />
+		<result property="m_SO2_IAQI" column="SO2_IAQI" />
+		<result property="m_NO2" column="NO2" />
+		<result property="m_NO2_IAQI" column="NO2_IAQI" />
+		<result property="m_NOX" column="NOX" />
+		<result property="m_PM10" column="PM10" />
+		<result property="m_PM10_IAQI" column="PM10_IAQI" />
+		<result property="m_PM10_Avg24" column="PM10_Avg24" />
+		<result property="m_PM10_Avg24_IAQI" column="PM10_Avg24_IAQI" />
+		<result property="m_CO" column="CO" />
+		<result property="m_CO_IAQI" column="CO_IAQI" />
+		<result property="m_O3" column="O3" />
+		<result property="m_O3_IAQI" column="O3_IAQI" />
+		<result property="m_O3_Avg8" column="O3_Avg8" />
+		<result property="m_O3_Avg8_IAQI" column="O3_Avg8_IAQI" />
+		<result property="m_PM2d5" column="PM2d5" />
+		<result property="m_PM2d5_IAQI" column="PM2d5_IAQI" />
+		<result property="m_PM2d5_Avg24" column="PM2d5_Avg24" />
+		<result property="m_PM2d5_Avg24_IAQI" column="PM2d5_Avg24_IAQI" />
+		<result property="m_AQIValue" column="AQIValue" />
+		<result property="m_PrimaryPollutant" column="PrimaryPollutant" />
+		<result property="m_DClass" column="Class" />
+		<result property="m_Grade" column="Grade" />
+		<result property="m_HealthEffect" column="HealthEffect" />
+		<result property="m_TakeStep" column="TakeStep" />
+	</resultMap>
+
+	<insert id="insert" parameterType="HourAQI" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO tb_HourAQI
+		(
+			Portname, DateTime, SO2, SO2_IAQI, NO2, NO2_IAQI, NO2, PM10, PM10_IAQI, PM10_Avg24, PM10_Avg24_IAQI, CO, CO_IAQI, O3, O3_IAQI, O3_Avg8, O3_Avg8_IAQI, PM2d5, PM2d5_IAQI, PM2d5_Avg24, PM2d5_Avg24_IAQI, AQIValue, PrimaryPollutant, Class, Grade, HealthEffect, TakeStep
+		)
+		VALUES
+		(
+			#{m_Portname}, #{m_DateTime}, #{m_SO2}, #{m_SO2_IAQI}, #{m_NO2}, #{m_NO2_IAQI}, #{m_NOX}, #{m_PM10}, #{m_PM10_IAQI}, #{m_PM10_Avg24}, #{m_PM10_Avg24_IAQI}, #{m_CO}, #{m_CO_IAQI}, #{m_O3}, #{m_O3_IAQI}, #{m_O3_Avg8}, #{m_O3_Avg8_IAQI}, #{m_PM2d5}, #{m_PM2d5_IAQI}, #{m_PM2d5_Avg24}, #{m_PM2d5_Avg24_IAQI}, #{m_AQIValue}, #{m_PrimaryPollutant}, #{m_DClass}, #{m_Grade}, #{m_HealthEffect}, #{m_TakeStep}
+		)
+	</insert>
+
+	<delete id="deleteAll">
+		DELETE FROM tb_HourAQI
+	</delete>
+
+	<select id="selectAll" parameterType="java.util.HashMap"
+		resultMap="HourAQIMap">
+		SELECT * FROM tb_HourAQI
+		ORDER BY dateTime desc
+	</select>
+</mapper>
