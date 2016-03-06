@@ -16,17 +16,17 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="portId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
- *         &lt;element name="beginTime" type="{http://www.w3.org/2001/XMLSchema}dateTime"/&gt;
- *         &lt;element name="endTime" type="{http://www.w3.org/2001/XMLSchema}dateTime"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType>
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="portId" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="beginTime" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
+ *         &lt;element name="endTime" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

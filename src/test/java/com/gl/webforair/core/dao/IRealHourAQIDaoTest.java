@@ -21,7 +21,7 @@ public class IRealHourAQIDaoTest extends BaseTest{
 	@Test
 	public void testInsert() {
 		
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i < 10; i++) {
 			RealHourAQI aqiData = new RealHourAQI();
 			aqiData.setPortname("test" + i);
 			aqiDataDao.insert(aqiData);
