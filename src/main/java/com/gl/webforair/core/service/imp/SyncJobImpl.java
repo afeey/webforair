@@ -20,6 +20,7 @@ import com.gl.webforair.core.po.HourAQI;
 import com.gl.webforair.core.po.RealHourAQI;
 import com.gl.webforair.core.service.IHourAQIService;
 import com.gl.webforair.core.service.IRealHourAQIService;
+import com.gl.webforair.core.service.ISyncJob;
 import com.gl.webforair.core.service.IWebService;
 
 /**
@@ -27,7 +28,7 @@ import com.gl.webforair.core.service.IWebService;
  * @author afeey
  *
  */
-public class SyncJobImpl {
+public class SyncJobImpl implements ISyncJob {
 	
 	private static final Logger log = LoggerFactory.getLogger(SyncJobImpl.class);
 	
@@ -168,8 +169,8 @@ public class SyncJobImpl {
             	aqiData.setO3_IAQI(data.get("O3_IAQI").asText());
             	aqiData.setRecent8HoursO3(data.get("Recent8HoursO3").asText());
             	aqiData.setRecent8HoursO3_IAQI(data.get("Recent8HoursO3_IAQI").asText());
-            	aqiData.setPM25(data.get("PM2.5").asText());
-            	aqiData.setPM25_IAQI(data.get("PM2.5_IAQI").asText());
+            	aqiData.setPM2d5(data.get("PM2.5").asText());
+            	aqiData.setPM2d5_IAQI(data.get("PM2.5_IAQI").asText());
             	aqiData.setAQIValue(data.get("AQIValue").asText());
             	aqiData.setPrimaryPollutant(data.get("PrimaryPollutant").asText());
             	aqiData.setDClass(data.get("Class").asText());

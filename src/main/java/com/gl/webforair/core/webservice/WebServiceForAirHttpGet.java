@@ -1,4 +1,4 @@
-﻿package com.gl.webforair.core.webservice;
+package com.gl.webforair.core.webservice;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;

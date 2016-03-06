@@ -13,7 +13,7 @@
 	
 </head>
 <body>
-	<a href="${rc.contextPath}/HourAQI" class="">HourAQI</a>
-	<a href="${rc.contextPath}/RealHourAQI" class="">RealHourAQI</a>
+	<a href="${rc.contextPath}/HourAQI" class="btn btn-default">HourAQI</a>
+	<a href="${rc.contextPath}/RealHourAQI" class="btn btn-default">RealHourAQI</a>
 </body>
 </html>

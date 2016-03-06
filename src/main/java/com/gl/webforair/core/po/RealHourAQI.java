@@ -9,241 +9,289 @@ import java.util.Date;
  *
  */
 public class RealHourAQI {
-	private Integer id;
-	private String portname;
-	private Date dateTime;
-	private String sO2;
-	private String sO2_IAQI;
-	private String nO2;
-	private String nO2_IAQI;
-	private String pM10;
-	private String pM10_IAQI;
-	private String cO;
-	private String cO_IAQI;
-	private String o3;
-	private String o3_IAQI;
-	private String recent8HoursO3;
-	private String recent8HoursO3_IAQI;
-	private String pM25;
-	private String pM25_IAQI;
-	private String aQIValue;
-	private String primaryPollutant;
-	private String dClass;
-	private String grade;
-	private String healthEffect;
-	private String takeStep;
+	private Integer m_Id;
+	private String m_Portname;
+	private Date m_DateTime;
+	private String m_SO2;
+	private String m_SO2_IAQI;
+	private String m_NO2;
+	private String m_NO2_IAQI;
+	private String m_PM10;
+	private String m_PM10_IAQI;
+	private String m_CO;
+	private String m_CO_IAQI;
+	private String m_O3;
+	private String m_O3_IAQI;
+	private String m_Recent8HoursO3;
+	private String m_Recent8HoursO3_IAQI;
+	private String m_PM2d5;
+	private String m_PM2d5_IAQI;
+	private String m_AQIValue;
+	private String m_PrimaryPollutant;
+	private String m_DClass;
+	private String m_Grade;
+	private String m_HealthEffect;
+	private String m_TakeStep;
+	
 	
 	/**
 	 * 构造函数
 	 */
 	public RealHourAQI() {
-		this.id=0;
-		this.dateTime=new Date();
-		this.sO2="";
-		this.sO2_IAQI="";
-		this.nO2="";
-		this.nO2_IAQI="";
-		this.pM10="";
-		this.pM10_IAQI="";
-		this.cO="";
-		this.cO_IAQI="";
-		this.o3="";
-		this.o3_IAQI="";
-		this.recent8HoursO3="";
-		this.recent8HoursO3_IAQI="";
-		this.pM25="";
-		this.pM25_IAQI="";
-		this.aQIValue="";
-		this.primaryPollutant="";
-		this.dClass="";
-		this.grade="";
-		this.healthEffect="";
-		this.takeStep="";
+		this.m_Id = 0;
+		this.m_DateTime = new Date();
+		this.m_SO2 = "";
+		this.m_SO2_IAQI = "";
+		this.m_NO2 = "";
+		this.m_NO2_IAQI = "";
+		this.m_PM10 = "";
+		this.m_PM10_IAQI = "";
+		this.m_CO = "";
+		this.m_CO_IAQI = "";
+		this.m_O3 = "";
+		this.m_O3_IAQI = "";
+		this.m_Recent8HoursO3 = "";
+		this.m_Recent8HoursO3_IAQI = "";
+		this.m_PM2d5 = "";
+		this.m_PM2d5_IAQI = "";
+		this.m_AQIValue = "";
+		this.m_PrimaryPollutant = "";
+		this.m_DClass = "";
+		this.m_Grade = "";
+		this.m_HealthEffect = "";
+		this.m_TakeStep = "";
 	}
+
 
 	public Integer getId() {
-		return id;
+		return m_Id;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+
+	public void setId(Integer m_Id) {
+		this.m_Id = m_Id;
 	}
+
 
 	public String getPortname() {
-		return portname;
+		return m_Portname;
 	}
 
-	public void setPortname(String portname) {
-		this.portname = portname;
+
+	public void setPortname(String m_Portname) {
+		this.m_Portname = m_Portname;
 	}
+
 
 	public Date getDateTime() {
-		return dateTime;
+		return m_DateTime;
 	}
 
-	public void setDateTime(Date dateTime) {
-		this.dateTime = dateTime;
+
+	public void setDateTime(Date m_DateTime) {
+		this.m_DateTime = m_DateTime;
 	}
+
 
 	public String getSO2() {
-		return sO2;
+		return m_SO2;
 	}
 
-	public void setSO2(String sO2) {
-		this.sO2 = sO2;
+
+	public void setSO2(String m_SO2) {
+		this.m_SO2 = m_SO2;
 	}
+
 
 	public String getSO2_IAQI() {
-		return sO2_IAQI;
+		return m_SO2_IAQI;
 	}
 
-	public void setSO2_IAQI(String sO2_IAQI) {
-		this.sO2_IAQI = sO2_IAQI;
+
+	public void setSO2_IAQI(String m_SO2_IAQI) {
+		this.m_SO2_IAQI = m_SO2_IAQI;
 	}
+
 
 	public String getNO2() {
-		return nO2;
+		return m_NO2;
 	}
 
-	public void setNO2(String nO2) {
-		this.nO2 = nO2;
+
+	public void setNO2(String m_NO2) {
+		this.m_NO2 = m_NO2;
 	}
+
 
 	public String getNO2_IAQI() {
-		return nO2_IAQI;
+		return m_NO2_IAQI;
 	}
 
-	public void setNO2_IAQI(String nO2_IAQI) {
-		this.nO2_IAQI = nO2_IAQI;
+
+	public void setNO2_IAQI(String m_NO2_IAQI) {
+		this.m_NO2_IAQI = m_NO2_IAQI;
 	}
+
 
 	public String getPM10() {
-		return pM10;
+		return m_PM10;
 	}
 
-	public void setPM10(String pM10) {
-		this.pM10 = pM10;
+
+	public void setPM10(String m_PM10) {
+		this.m_PM10 = m_PM10;
 	}
+
 
 	public String getPM10_IAQI() {
-		return pM10_IAQI;
+		return m_PM10_IAQI;
 	}
 
-	public void setPM10_IAQI(String pM10_IAQI) {
-		this.pM10_IAQI = pM10_IAQI;
+
+	public void setPM10_IAQI(String m_PM10_IAQI) {
+		this.m_PM10_IAQI = m_PM10_IAQI;
 	}
+
 
 	public String getCO() {
-		return cO;
+		return m_CO;
 	}
 
-	public void setCO(String cO) {
-		this.cO = cO;
+
+	public void setCO(String m_CO) {
+		this.m_CO = m_CO;
 	}
+
 
 	public String getCO_IAQI() {
-		return cO_IAQI;
+		return m_CO_IAQI;
 	}
 
-	public void setCO_IAQI(String cO_IAQI) {
-		this.cO_IAQI = cO_IAQI;
+
+	public void setCO_IAQI(String m_CO_IAQI) {
+		this.m_CO_IAQI = m_CO_IAQI;
 	}
+
 
 	public String getO3() {
-		return o3;
+		return m_O3;
 	}
 
-	public void setO3(String o3) {
-		this.o3 = o3;
+
+	public void setO3(String m_O3) {
+		this.m_O3 = m_O3;
 	}
+
 
 	public String getO3_IAQI() {
-		return o3_IAQI;
+		return m_O3_IAQI;
 	}
 
-	public void setO3_IAQI(String o3_IAQI) {
-		this.o3_IAQI = o3_IAQI;
+
+	public void setO3_IAQI(String m_O3_IAQI) {
+		this.m_O3_IAQI = m_O3_IAQI;
 	}
+
 
 	public String getRecent8HoursO3() {
-		return recent8HoursO3;
+		return m_Recent8HoursO3;
 	}
 
-	public void setRecent8HoursO3(String recent8HoursO3) {
-		this.recent8HoursO3 = recent8HoursO3;
+
+	public void setRecent8HoursO3(String m_Recent8HoursO3) {
+		this.m_Recent8HoursO3 = m_Recent8HoursO3;
 	}
+
 
 	public String getRecent8HoursO3_IAQI() {
-		return recent8HoursO3_IAQI;
+		return m_Recent8HoursO3_IAQI;
 	}
 
-	public void setRecent8HoursO3_IAQI(String recent8HoursO3_IAQI) {
-		this.recent8HoursO3_IAQI = recent8HoursO3_IAQI;
+
+	public void setRecent8HoursO3_IAQI(String m_Recent8HoursO3_IAQI) {
+		this.m_Recent8HoursO3_IAQI = m_Recent8HoursO3_IAQI;
 	}
 
-	public String getPM25() {
-		return pM25;
+
+	public String getPM2d5() {
+		return m_PM2d5;
 	}
 
-	public void setPM25(String pM25) {
-		this.pM25 = pM25;
+
+	public void setPM2d5(String m_PM2d5) {
+		this.m_PM2d5 = m_PM2d5;
 	}
 
-	public String getPM25_IAQI() {
-		return pM25_IAQI;
+
+	public String getPM2d5_IAQI() {
+		return m_PM2d5_IAQI;
 	}
 
-	public void setPM25_IAQI(String pM25_IAQI) {
-		this.pM25_IAQI = pM25_IAQI;
+
+	public void setPM2d5_IAQI(String m_PM2d5_IAQI) {
+		this.m_PM2d5_IAQI = m_PM2d5_IAQI;
 	}
+
 
 	public String getAQIValue() {
-		return aQIValue;
+		return m_AQIValue;
 	}
 
-	public void setAQIValue(String aQIValue) {
-		this.aQIValue = aQIValue;
+
+	public void setAQIValue(String m_AQIValue) {
+		this.m_AQIValue = m_AQIValue;
 	}
+
 
 	public String getPrimaryPollutant() {
-		return primaryPollutant;
+		return m_PrimaryPollutant;
 	}
 
-	public void setPrimaryPollutant(String primaryPollutant) {
-		this.primaryPollutant = primaryPollutant;
+
+	public void setPrimaryPollutant(String m_PrimaryPollutant) {
+		this.m_PrimaryPollutant = m_PrimaryPollutant;
 	}
+
 
 	public String getDClass() {
-		return dClass;
+		return m_DClass;
 	}
 
-	public void setDClass(String dClass) {
-		this.dClass = dClass;
+
+	public void setDClass(String m_DClass) {
+		this.m_DClass = m_DClass;
 	}
+
 
 	public String getGrade() {
-		return grade;
+		return m_Grade;
 	}
 
-	public void setGrade(String grade) {
-		this.grade = grade;
+
+	public void setGrade(String m_Grade) {
+		this.m_Grade = m_Grade;
 	}
+
 
 	public String getHealthEffect() {
-		return healthEffect;
+		return m_HealthEffect;
 	}
 
-	public void setHealthEffect(String healthEffect) {
-		this.healthEffect = healthEffect;
+
+	public void setHealthEffect(String m_HealthEffect) {
+		this.m_HealthEffect = m_HealthEffect;
 	}
+
 
 	public String getTakeStep() {
-		return takeStep;
+		return m_TakeStep;
 	}
 
-	public void setTakeStep(String takeStep) {
-		this.takeStep = takeStep;
+
+	public void setTakeStep(String m_TakeStep) {
+		this.m_TakeStep = m_TakeStep;
 	}
 
+	
 
 }

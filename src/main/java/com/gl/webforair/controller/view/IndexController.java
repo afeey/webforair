@@ -25,6 +25,11 @@ public class IndexController {
 
 	//private static final Logger log = LoggerFactory.getLogger(IndexController.class);
 
+	@RequestMapping("/")
+	public String Index(Model model, HttpSession session) {
+		return "index";
+	}
+	
 	@Autowired
 	private IHourAQIService hourAQIService;
 	@Autowired

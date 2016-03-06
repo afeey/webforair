@@ -38,7 +38,7 @@
 	<insert id="insert" parameterType="HourAQI" useGeneratedKeys="true" keyProperty="id">
 		INSERT INTO tb_HourAQI
 		(
-			Portname, DateTime, SO2, SO2_IAQI, NO2, NO2_IAQI, NO2, PM10, PM10_IAQI, PM10_Avg24, PM10_Avg24_IAQI, CO, CO_IAQI, O3, O3_IAQI, O3_Avg8, O3_Avg8_IAQI, PM2d5, PM2d5_IAQI, PM2d5_Avg24, PM2d5_Avg24_IAQI, AQIValue, PrimaryPollutant, Class, Grade, HealthEffect, TakeStep
+			Portname, DateTime, SO2, SO2_IAQI, NO2, NO2_IAQI, NOX, PM10, PM10_IAQI, PM10_Avg24, PM10_Avg24_IAQI, CO, CO_IAQI, O3, O3_IAQI, O3_Avg8, O3_Avg8_IAQI, PM2d5, PM2d5_IAQI, PM2d5_Avg24, PM2d5_Avg24_IAQI, AQIValue, PrimaryPollutant, Class, Grade, HealthEffect, TakeStep
 		)
 		VALUES
 		(

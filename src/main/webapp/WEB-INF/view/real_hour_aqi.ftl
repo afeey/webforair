@@ -23,7 +23,7 @@
 	<table id="list" class="table table-striped table-bordered" style="width:2000px;">
 		<thead>
 			<tr>
-      			<th style="width:180px;">DateTime</th>
+      			<th style="width:150px;">DateTime</th>
       			<th style="width:100px;">PortName</th>
       			<th>SO2</th>
       			<th>SO2_IAQI</th>
@@ -64,8 +64,8 @@
       			<td>${r.o3_IAQI}</td>
       			<td>${r.recent8HoursO3}</td>
       			<td>${r.recent8HoursO3_IAQI}</td>
-      			<td>${r.PM25}</td>
-      			<td>${r.PM25_IAQI}</td>
+      			<td>${r.PM2d5}</td>
+      			<td>${r.PM2d5_IAQI}</td>
       			<td>${r.AQIValue}</td>
       			<td>${r.primaryPollutant}</td>
       			<td>${r.DClass}</td>

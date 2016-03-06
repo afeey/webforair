@@ -1,4 +1,4 @@
-﻿package com.gl.webforair.core.webservice;
+package com.gl.webforair.core.webservice;
 
 import java.net.MalformedURLException;
 import java.net.URL;

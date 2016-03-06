@@ -5,39 +5,39 @@
 <!--IRealHourAQIDao映射文件 -->
 <mapper namespace="com.gl.webforair.core.dao.IRealHourAQIDao">
 	<resultMap id="RealHourAQIMap" type="RealHourAQI">
-		<result property="id" column="Id" />
-		<result property="portname" column="Portname" />
-		<result property="dateTime" column="DateTime" />
-		<result property="sO2" column="SO2" />
-		<result property="sO2_IAQI" column="SO2_IAQI" />
-		<result property="nO2" column="NO2" />
-		<result property="nO2_IAQI" column="NO2_IAQI" />
-		<result property="pM10" column="PM10" />
-		<result property="pM10_IAQI" column="PM10_IAQI" />
-		<result property="cO" column="CO" />
-		<result property="cO_IAQI" column="CO_IAQI" />
-		<result property="o3" column="O3" />
-		<result property="o3_IAQI" column="O3_IAQI" />
-		<result property="recent8HoursO3" column="Recent8HoursO3" />
-		<result property="recent8HoursO3_IAQI" column="Recent8HoursO3_IAQI" />
-		<result property="pM25" column="PM25" />
-		<result property="pM25_IAQI" column="PM25_IAQI" />
-		<result property="aQIValue" column="AQIValue" />
-		<result property="primaryPollutant" column="PrimaryPollutant" />
-		<result property="dClass" column="Class" />
-		<result property="grade" column="Grade" />
-		<result property="healthEffect" column="HealthEffect" />
-		<result property="takeStep" column="TakeStep" />
+		<result property="m_Id" column="Id" />
+		<result property="m_Portname" column="Portname" />
+		<result property="m_DateTime" column="DateTime" />
+		<result property="m_SO2" column="SO2" />
+		<result property="m_SO2_IAQI" column="SO2_IAQI" />
+		<result property="m_NO2" column="NO2" />
+		<result property="m_NO2_IAQI" column="NO2_IAQI" />
+		<result property="m_PM10" column="PM10" />
+		<result property="m_PM10_IAQI" column="PM10_IAQI" />
+		<result property="m_CO" column="CO" />
+		<result property="m_CO_IAQI" column="CO_IAQI" />
+		<result property="m_O3" column="O3" />
+		<result property="m_O3_IAQI" column="O3_IAQI" />
+		<result property="m_Recent8HoursO3" column="Recent8HoursO3" />
+		<result property="m_Recent8HoursO3_IAQI" column="Recent8HoursO3_IAQI" />
+		<result property="m_PM2d5" column="PM2d5" />
+		<result property="m_PM2d5_IAQI" column="PM2d5_IAQI" />
+		<result property="m_AQIValue" column="AQIValue" />
+		<result property="m_PrimaryPollutant" column="PrimaryPollutant" />
+		<result property="m_DClass" column="Class" />
+		<result property="m_Grade" column="Grade" />
+		<result property="m_HealthEffect" column="HealthEffect" />
+		<result property="m_TakeStep" column="TakeStep" />
 	</resultMap>
 
 	<insert id="insert" parameterType="RealHourAQI" useGeneratedKeys="true" keyProperty="id">
 		INSERT INTO tb_RealHourAQI
 		(
-			portname, dateTime, SO2, SO2_IAQI, NO2, NO2_IAQI, PM10, PM10_IAQI, CO, CO_IAQI, O3, O3_IAQI, Recent8HoursO3, Recent8HoursO3_IAQI, PM25, PM25_IAQI, AQIValue, PrimaryPollutant, Class, Grade, HealthEffect, TakeStep
+			Portname, DateTime, SO2, SO2_IAQI, NO2, NO2_IAQI, PM10, PM10_IAQI, CO, CO_IAQI, O3, O3_IAQI, Recent8HoursO3, Recent8HoursO3_IAQI, PM2d5, PM2d5_IAQI, AQIValue, PrimaryPollutant, Class, Grade, HealthEffect, TakeStep
 		)
 		VALUES
 		(
-			#{portname}, #{dateTime}, #{sO2}, #{sO2_IAQI}, #{nO2}, #{nO2_IAQI}, #{pM10}, #{pM10_IAQI}, #{cO}, #{cO_IAQI}, #{o3}, #{o3_IAQI}, #{recent8HoursO3}, #{recent8HoursO3_IAQI}, #{pM25}, #{pM25_IAQI}, #{aQIValue}, #{primaryPollutant}, #{dClass}, #{grade}, #{healthEffect}, #{takeStep}
+			#{m_Portname}, #{m_DateTime}, #{m_SO2}, #{m_SO2_IAQI}, #{m_NO2}, #{m_NO2_IAQI}, #{m_PM10}, #{m_PM10_IAQI}, #{m_CO}, #{m_CO_IAQI}, #{m_O3}, #{m_O3_IAQI}, #{m_Recent8HoursO3}, #{m_Recent8HoursO3_IAQI}, #{m_PM2d5}, #{m_PM2d5_IAQI}, #{m_AQIValue}, #{m_PrimaryPollutant}, #{m_DClass}, #{m_Grade}, #{m_HealthEffect}, #{m_TakeStep}
 		)
 	</insert>
 
