@@ -47,22 +47,30 @@ public class SyncJobImpl implements ISyncJob {
 		
 		try {
 
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-
-			// 获取结束日期
-			Date end = sdf.parse(sdf.format(new Date()));
-			// 计算起始日期
+			log.info("同步HourAQI数据...");
+			Date end = new Date();	//结束日期
 			Calendar cal = Calendar.getInstance();
 			cal.setTime(end);
 			cal.add(Calendar.DAY_OF_MONTH, -1);
-			Date start = sdf.parse(sdf.format(cal.getTime()));
-
-			log.info("同步HourAQI数据...");
-			String json = webService.getHourAQI(4, end, end);
+			
+			Date start = cal.getTime();	//开始日期
+			
+			String json = webService.getHourAQI(4, start, end);
+			
 			List<HourAQI> hourAQIList = jsonToHourAQIList(json);
-			hourAQIService.syncData(hourAQIList);
+			List<HourAQI> lastAQIList = new ArrayList<HourAQI>(); 
+			//取最新一条
+			if(hourAQIList.size()>0){
+				lastAQIList.add(hourAQIList.get(hourAQIList.size()-1));
+			}
+			hourAQIService.syncData(lastAQIList);
 			
 			log.info("同步RealHourAQI数据...");
+			SimpleDateFormat sdf0 = new SimpleDateFormat("yyyy-MM-dd");
+			SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			start = sdf1.parse(sdf0.format(start) + " 00:00:00");
+			end = sdf1.parse(sdf0.format(end) + " 23:59:59");
+			
 			json = webService.getRealHourAQI(4, start, end);
 			List<RealHourAQI> realHourAQIList = jsonToRealHourAQIList(json);
 			realHourAQIService.syncData(realHourAQIList);
