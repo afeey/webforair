@@ -16,7 +16,7 @@
 	<!-- 调度触发器 -->
 	<bean id="cronTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 		<property name="jobDetail" ref="syncJobDetail" />
-		<property name="cronExpression" value="0 5/20 * * * ?" /><!-- 0/20 * * * * ? -->
+		<property name="cronExpression" value="0 1/5 * * * ?" /><!-- 0/20 * * * * ? -->
 		<property name="startDelay" value="0" />
 	</bean>
 
